@@ -1,0 +1,32 @@
+{% load bootstrap4 %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <title>Django Social</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div>
+            <h1 class="text-white text-center">{% block title %}{% endblock %}</h1>
+            <div class="card p-5">
+                {% block content %}{% endblock  %}
+            </div>
+        </div>
+    </div>
+
+    {% bootstrap_javascript jquery='full' %}
+</body>
+
+</html>
